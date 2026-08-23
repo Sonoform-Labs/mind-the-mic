@@ -1,0 +1,13 @@
+{
+  "classroomBase": {
+    "our_nn": 5.989744332137293,
+    "their_nn": 5.99,
+    "err_pct": -0.004268244786435325,
+    "their_diffrir": 5.22,
+    "gain": 0.7700000000000005,
+    "nuisance_median": 6.649155989289284,
+    "ratio": 8.635267518557507,
+    "frac_pairs_above": 1.0,
+    "n_test": 116
+  }
+}

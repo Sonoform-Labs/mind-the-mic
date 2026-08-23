@@ -97,7 +97,11 @@ for a, b in zip(edges[:-1], edges[1:]):
 ax.plot(cx, cy, "o-", color=BLUE, lw=1.6, ms=4, label="median")
 ax.axhline(0.77, color=RED, lw=1.6, ls="--", label="DiffRIR reported gain (0.77)")
 ax.axvspan(0.255, 1.891, color="orange", alpha=.10)
-ax.text(1.0, ax.get_ylim()[1]*.02, "their held-out\ndisplacement range", fontsize=6.5, color="#aa6600", ha="center")
+_f = float((P[:, 1] > 0.77).mean())
+ax.text(0.17, 0.60, "their held-out\ndisplacement\nrange", transform=ax.transAxes,
+        fontsize=6.5, color="#aa6600", ha="center")
+ax.text(0.98, 0.10, f"all {len(P)} pairs exceed it (min {P[:,1].min():.2f})",
+        transform=ax.transAxes, fontsize=7.5, ha="right", color=RED)
 ax.set_xscale("log"); ax.set_xlabel("inter-receiver distance (m)")
 ax.set_ylabel("multiscale log-L1 (x10, table units)")
 ax.set_title("DiffRIR classroom: moving the microphone vs their reported gain", fontsize=9)
