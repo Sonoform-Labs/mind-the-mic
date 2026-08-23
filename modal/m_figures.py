@@ -10,6 +10,7 @@ D = "data/diffrir/classroomBase"
 FS = 48000
 SCALES = [64, 128, 256, 512, 1024, 2048, 4096]
 EPS = 1e-6
+RIRLEN = 96000  # DiffRIR rir_length default; verified to reproduce their 5.99 baseline
 DEV = "cuda" if torch.cuda.is_available() else "cpu"
 rng = np.random.default_rng(0)
 
@@ -81,8 +82,8 @@ pts = []
 for _ in range(400):
     i, j = rng.integers(0, N, 2)
     if i == j: continue
-    a = torch.tensor(np.array(R[i]), dtype=torch.float32, device=DEV)
-    b = torch.tensor(np.array(R[j]), dtype=torch.float32, device=DEV)
+    a = torch.tensor(np.array(R[i][:RIRLEN]), dtype=torch.float32, device=DEV)
+    b = torch.tensor(np.array(R[j][:RIRLEN]), dtype=torch.float32, device=DEV)
     pts.append((float(np.linalg.norm(XYZ[i]-XYZ[j])), msl1(a, b)*10))
     del a, b
 P = np.array(pts)
@@ -104,14 +105,14 @@ ax.text(0.98, 0.10, f"all {len(P)} pairs exceed it (min {P[:,1].min():.2f})",
         transform=ax.transAxes, fontsize=7.5, ha="right", color=RED)
 ax.set_xscale("log"); ax.set_xlabel("inter-receiver distance (m)")
 ax.set_ylabel("multiscale log-L1 (x10, table units)")
-ax.set_title("DiffRIR classroom: moving the microphone vs their reported gain", fontsize=9)
+ax.set_title("DiffRIR classroom, their metric at their evaluation length", fontsize=9)
 ax.legend(fontsize=7, frameon=False, loc="upper left")
 fig.savefig(f"{OUT}/fig2_displacement.pdf"); fig.savefig(f"{OUT}/fig2_displacement.png"); plt.close(fig)
 print("fig2 ok", flush=True)
 
 print("computing fig4 magnitudes ...", flush=True)
 idx = rng.choice(N, size=16, replace=False)
-X = torch.tensor(np.array(R[np.sort(idx)]), dtype=torch.float32, device=DEV)
+X = torch.tensor(np.array(R[np.sort(idx)][:, :RIRLEN]), dtype=torch.float32, device=DEV)
 fig, ax = plt.subplots(figsize=(4.2, 2.6))
 for n, c in zip([64, 512, 4096], [BLUE, "#66a61e", RED]):
     m = tmag(X, n).flatten().float().cpu().numpy()
