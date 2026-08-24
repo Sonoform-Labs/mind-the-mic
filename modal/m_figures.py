@@ -24,23 +24,23 @@ ct = json.load(open("modal/out_controls.json"))
 sn = json.load(open("modal/out_snr.json"))
 
 # ---------- E1 ----------
-mets = ["LSD", "mel", "MFCC", "CLAP"]
+mets = ["LSD", "mel", "MFCC"]
 sig = [wc[m]["sigma_within"] for m in mets]
 lo = [wc[m]["sigma_within"]-wc[m]["ci"][0] for m in mets]
 hi = [wc[m]["ci"][1]-wc[m]["sigma_within"] for m in mets]
 harn = [ct["A1 HARNESS NULL (mic fixed)"][m] for m in mets]
 base12 = [ct["A0 baseline (15 mics)"][m] for m in mets]
 
-fig, axes = plt.subplots(1, 4, figsize=(7.2, 2.1))
+fig, axes = plt.subplots(1, 3, figsize=(5.4, 2.1))
 for k, m in enumerate(mets):
     ax = axes[k]
     ax.bar([0], [sig[k]], yerr=[[lo[k]], [hi[k]]], width=.6, color=BLUE, capsize=3, label="receiver moves")
     ax.bar([1], [harn[k]], width=.6, color=GREY, label="pipeline only")
     ax.set_xticks([0, 1]); ax.set_xticklabels(["recv", "null"], fontsize=8)
     ax.set_title(m, fontsize=9)
-    ax.text(1, harn[k], f"  {harn[k]/base12[k]*100:.0f}%", va="bottom", ha="center", fontsize=7, color=GREY)
+    ax.text(1, harn[k], f"  {harn[k]/sig[k]*100:.0f}%", va="bottom", ha="center", fontsize=7, color=GREY)
     if k == 0: ax.set_ylabel("sigma (metric units)")
-axes[0].legend(fontsize=7, frameon=False, loc="upper right")
+axes[-1].legend(fontsize=6.5, frameon=False, loc="upper right")
 fig.suptitle("Receiver-position sigma vs an analysis-pipeline null", fontsize=10, y=1.06)
 fig.savefig(f"{OUT}/fig1_sigma_vs_null.pdf"); fig.savefig(f"{OUT}/fig1_sigma_vs_null.png"); plt.close(fig)
 print("fig1 ok", flush=True)
