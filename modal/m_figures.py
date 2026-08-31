@@ -4,7 +4,7 @@ import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 
-OUT = "paper/figures"
+OUT = "paper/tex/figures"
 CACHE = "modal/.figcache"
 os.makedirs(OUT, exist_ok=True)
 os.makedirs(CACHE, exist_ok=True)
@@ -194,7 +194,7 @@ else:
     np.save(pair_cache, P)
 
 fig, ax = plt.subplots(figsize=(TW, 2.55), layout="constrained")
-ax.axvspan(0.255, 1.891, color=CREAM, alpha=0.55, lw=0, label="their held-out range")
+ax.axvspan(0.255, 1.891, color=CREAM, alpha=0.55, lw=0, label="held-out range")
 ax.scatter(P[:, 0], P[:, 1], s=13, alpha=0.55, facecolors=MAUVE,
            edgecolors=SLATE, linewidths=0.3, zorder=3,
            label="ground-truth receiver pairs")
@@ -205,8 +205,8 @@ for a, b in zip(edges[:-1], edges[1:]):
     if m.sum() >= 3:
         cx.append(np.median(P[m, 0]))
         cy.append(np.median(P[m, 1]))
-ax.plot(cx, cy, "o-", color=SLATE, lw=0.9, ms=3.0, zorder=4, label="binned median")
-ax.axhline(0.77, color=RULE, lw=0.8, ls=(0, (2.8, 2.2)), zorder=2, label="their reported gain")
+ax.plot(cx, cy, "o-", color=SLATE, lw=0.9, ms=3.0, zorder=4, label="median")
+ax.axhline(0.77, color=RULE, lw=0.8, ls=(0, (2.8, 2.2)), zorder=2, label="DiffRIR gain")
 ax.set_xscale("log")
 ax.set_xticks([0.25, 0.5, 1, 2, 4, 8])
 ax.xaxis.set_major_formatter(matplotlib.ticker.FuncFormatter(
