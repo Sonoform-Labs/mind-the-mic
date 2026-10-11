@@ -1,0 +1,114 @@
+{
+ "classroomBase": {
+  "n": 630,
+  "R_shape": [
+   630,
+   671884
+  ],
+  "dtype": "float64",
+  "band": [
+   0.25479375000000015,
+   1.8912690391577187
+  ],
+  "inband_n": 150,
+  "inband_med_sep": 1.3251137414034506,
+  "inband_med": 0.10739679536952226,
+  "inband_min": 0.06264596463840454,
+  "inband_ratio_pub": 6.712299710595142,
+  "inband_ratio_repro": 7.82118097417795,
+  "inband_frac_above_pub": 1.0,
+  "unr_n": 150,
+  "unr_med_sep": 3.74433926234952,
+  "unr_max_sep": 7.844021276434444,
+  "unr_med": 0.12031023092077249,
+  "unr_min": 0.0816207265043793,
+  "stored_unr_med": 0.12031023092077248,
+  "unr_ratio_pub": 7.51938943254828,
+  "unr_ratio_repro": 8.761603042613089,
+  "unr_frac_above_pub": 1.0
+ },
+ "dampenedBase": {
+  "n": 276,
+  "R_shape": [
+   276,
+   671884
+  ],
+  "dtype": "float64",
+  "band": [
+   0.10859999999999959,
+   1.4319263807891802
+  ],
+  "inband_n": 150,
+  "inband_med_sep": 1.0755839344281786,
+  "inband_med": 0.055953159947834175,
+  "inband_min": 0.02286529452487774,
+  "inband_ratio_pub": 11.190631989566835,
+  "inband_ratio_repro": 15.18651579185749,
+  "inband_frac_above_pub": 1.0,
+  "unr_n": 149,
+  "unr_med_sep": 1.8603933455051913,
+  "unr_max_sep": 4.199185463872726,
+  "unr_med": 0.05826027986460471,
+  "unr_min": 0.02286529452487774,
+  "stored_unr_med": 0.05826027986460471,
+  "unr_ratio_pub": 11.652055972920943,
+  "unr_ratio_repro": 15.812702285746491,
+  "unr_frac_above_pub": 1.0
+ },
+ "hallwayBase": {
+  "n": 576,
+  "R_shape": [
+   576,
+   671884
+  ],
+  "dtype": "float64",
+  "band": [
+   0.30446927083333186,
+   1.7059050845598438
+  ],
+  "inband_n": 150,
+  "inband_med_sep": 1.2013103835670949,
+  "inband_med": 0.30658944716884323,
+  "inband_min": 0.27358238038409777,
+  "inband_ratio_pub": 34.065494129871475,
+  "inband_ratio_repro": 63.310179437786175,
+  "inband_frac_above_pub": 1.0,
+  "unr_n": 150,
+  "unr_med_sep": 4.930855686587504,
+  "unr_max_sep": 14.975470812403788,
+  "unr_med": 0.3458907845901663,
+  "unr_min": 0.2824597847642998,
+  "stored_unr_med": 0.34589078459016637,
+  "unr_ratio_pub": 38.43230939890737,
+  "unr_ratio_repro": 71.42583621353512,
+  "unr_frac_above_pub": 1.0
+ },
+ "complexBase": {
+  "n": 408,
+  "R_shape": [
+   408,
+   671884
+  ],
+  "dtype": "float64",
+  "band": [
+   0.39490000000000003,
+   2.626934715595346
+  ],
+  "inband_n": 150,
+  "inband_med_sep": 1.809185783470114,
+  "inband_med": 0.10079568125687616,
+  "inband_min": 0.06699576574920144,
+  "inband_ratio_pub": 14.399383036696594,
+  "inband_ratio_repro": 15.134623984072828,
+  "inband_frac_above_pub": 1.0,
+  "unr_n": 150,
+  "unr_med_sep": 5.323881740149747,
+  "unr_max_sep": 11.403257648584459,
+  "unr_med": 0.11931059550159737,
+  "unr_min": 0.06699576574920144,
+  "stored_unr_med": 0.11931059550159741,
+  "unr_ratio_pub": 17.04437078594248,
+  "unr_ratio_repro": 17.914666359867507,
+  "unr_frac_above_pub": 1.0
+ }
+}
