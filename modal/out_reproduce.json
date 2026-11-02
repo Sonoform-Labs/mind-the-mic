@@ -1,8 +1,0 @@
-{
-  "classroomBase": {
-    "n_test": 463,
-    "ours": 1.1462865423885844,
-    "reported_nn": 5.99,
-    "reported_diffrir": 5.22
-  }
-}

@@ -1,0 +1,50 @@
+{
+  "classroomBase": {
+    "band_lo": 0.25479375000000015,
+    "band_hi": 1.8912690391577187,
+    "heldout_median_disp": 0.9590421760024748,
+    "n_pairs": 150,
+    "pair_median_sep": 1.3251137414034506,
+    "matched_nuisance_median": 6.100413594394922,
+    "gain": 0.77,
+    "matched_ratio": 7.922615057655743,
+    "unrestricted_ratio": 8.636363636363637,
+    "frac_pairs_above_gain": 1.0
+  },
+  "dampenedBase": {
+    "band_lo": 0.10859999999999959,
+    "band_hi": 1.4319263807891802,
+    "heldout_median_disp": 0.7431059516208627,
+    "n_pairs": 150,
+    "pair_median_sep": 1.0755839344281786,
+    "matched_nuisance_median": 1.5101998904719949,
+    "gain": 0.15,
+    "matched_ratio": 10.0679992698133,
+    "unrestricted_ratio": 12.733333333333333,
+    "frac_pairs_above_gain": 1.0
+  },
+  "hallwayBase": {
+    "band_lo": 0.30446927083333186,
+    "band_hi": 1.7059050845598438,
+    "heldout_median_disp": 0.9097115738117909,
+    "n_pairs": 150,
+    "pair_median_sep": 1.2013103835670949,
+    "matched_nuisance_median": 10.179861560463905,
+    "gain": 1.01,
+    "matched_ratio": 10.079070851944461,
+    "unrestricted_ratio": 12.049504950495049,
+    "frac_pairs_above_gain": 1.0
+  },
+  "complexBase": {
+    "band_lo": 0.39490000000000003,
+    "band_hi": 2.626934715595346,
+    "heldout_median_disp": 1.2612439296186921,
+    "n_pairs": 150,
+    "pair_median_sep": 1.809185783470114,
+    "matched_nuisance_median": 5.675214398652315,
+    "gain": 0.66,
+    "matched_ratio": 8.59880969492775,
+    "unrestricted_ratio": 9.803030303030303,
+    "frac_pairs_above_gain": 1.0
+  }
+}

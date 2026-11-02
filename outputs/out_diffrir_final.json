@@ -1,0 +1,46 @@
+{
+  "classroomBase": {
+    "our_nn": 5.989744332137293,
+    "their_nn": 5.99,
+    "err_pct": -0.004268244786435325,
+    "their_diffrir": 5.22,
+    "gain": 0.7700000000000005,
+    "nuisance_median": 6.649155989289284,
+    "ratio": 8.635267518557507,
+    "frac_pairs_above": 1.0,
+    "n_test": 116
+  },
+  "dampenedBase": {
+    "our_nn": 1.3030135977081954,
+    "their_nn": 1.36,
+    "err_pct": -4.1901766391032895,
+    "their_diffrir": 1.21,
+    "gain": 0.15000000000000013,
+    "nuisance_median": 1.9130737520754337,
+    "ratio": 12.753825013836213,
+    "frac_pairs_above": 1.0,
+    "n_test": 50
+  },
+  "hallwayBase": {
+    "our_nn": 10.25702548523744,
+    "their_nn": 10.14,
+    "err_pct": 1.1540974875487129,
+    "their_diffrir": 9.13,
+    "gain": 1.0099999999999998,
+    "nuisance_median": 12.170677781105042,
+    "ratio": 12.050176020896084,
+    "frac_pairs_above": 1.0,
+    "n_test": 105
+  },
+  "complexBase": {
+    "our_nn": 5.524391438812017,
+    "their_nn": 5.52,
+    "err_pct": 0.07955505094235267,
+    "their_diffrir": 4.86,
+    "gain": 0.6599999999999993,
+    "nuisance_median": 6.474159080535173,
+    "ratio": 9.80933194020482,
+    "frac_pairs_above": 1.0,
+    "n_test": 74
+  }
+}
